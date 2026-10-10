@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="About ColoShop - Learn about our design philosophy, ethical atelier craftsmanship, and commitment to modern sustainable luxury.">
+  <title>About Our Atelier | COLO SHOP</title>
+  
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛍️</text></svg>">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    .about-hero {
+      background: linear-gradient(rgba(30, 30, 39, 0.75), rgba(30, 30, 39, 0.75)), url('assets/images/category-men.jpg') center 20%/cover no-repeat;
+      color: #ffffff;
+      padding: 130px 0 100px;
+      text-align: center;
+    }
+
+    .about-hero h1 {
+      font-size: 3.6rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      letter-spacing: -1px;
+    }
+
+    .about-hero p {
+      max-width: 650px;
+      margin: 0 auto;
+      font-size: 1.15rem;
+      color: #e2e4e9;
+      line-height: 1.8;
+    }
+
+    .story-section {
+      padding: 90px 0;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .story-img-stack {
+      position: relative;
+    }
+
+    .story-img-main {
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      width: 100%;
+      height: 480px;
+      object-fit: cover;
+    }
+
+    .story-badge {
+      position: absolute;
+      bottom: -20px;
+      right: -20px;
+      background: var(--primary);
+      color: #fff;
+      padding: 24px 30px;
+      border-radius: var(--radius-sm);
+      box-shadow: var(--shadow-lg);
+      text-align: center;
+    }
+
+    .story-badge strong {
+      font-size: 2.2rem;
+      display: block;
+      line-height: 1;
+    }
+
+    .story-badge span {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+    }
+
+    .story-text h2 {
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 20px;
+      line-height: 1.25;
+    }
+
+    .story-text p {
+      font-size: 0.95rem;
+      color: var(--dark-secondary);
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    /* Pillars */
+    .pillars-section {
+      background: #f7f8fa;
+      padding: 90px 0;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-top: 50px;
+    }
+
+    .pillar-card {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-normal);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-light);
+    }
+
+    .pillar-icon {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+
+    .pillar-card h3 {
+      font-size: 1.2rem;
+      color: var(--dark);
+      margin-bottom: 12px;
+      font-weight: 700;
+    }
+
+    .pillar-card p {
+      font-size: 0.88rem;
+      color: var(--dark-secondary);
+      line-height: 1.7;
+    }
+
+    /* Timeline */
+    .timeline-section {
+      padding: 90px 0;
+    }
+
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 50px auto 0;
+      padding: 20px 0;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      width: 2px;
+      background: var(--border-light);
+      transform: translateX(-50%);
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 45px;
+      width: 50%;
+      padding: 0 35px;
+    }
+
+    .timeline-item:nth-child(odd) {
+      left: 0;
+      text-align: right;
+    }
+
+    .timeline-item:nth-child(even) {
+      left: 50%;
+      text-align: left;
+    }
+
+    .timeline-dot {
+      position: absolute;
+      top: 6px;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--primary);
+      box-shadow: 0 0 0 4px #fff, 0 0 0 6px var(--primary-light);
+    }
+
+    .timeline-item:nth-child(odd) .timeline-dot {
+      right: -7px;
+    }
+
+    .timeline-item:nth-child(even) .timeline-dot {
+      left: -7px;
+    }
+
+    .timeline-year {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+
+    .timeline-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 6px;
+    }
+
+    .timeline-desc {
+      font-size: 0.84rem;
+      color: var(--dark-secondary);
+      line-height: 1.6;
+    }
+
+    @media (max-width: 768px) {
+      .story-grid { grid-template-columns: 1fr; }
+      .story-badge { right: 10px; bottom: 10px; }
+      .pillars-grid { grid-template-columns: 1fr; }
+      .timeline::before { left: 20px; }
+      .timeline-item { width: 100%; left: 0 !important; text-align: left !important; padding-left: 50px; }
+      .timeline-item .timeline-dot { left: 13px !important; }
+      .about-hero h1 { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span class="promo-tag">SINCE 2018</span>
+        <span>CRAFTING TIMELESS ESSENTIALS WITH ETHICAL MASTERY</span>
+      </div>
+      <div class="top-bar-right">
+        <div class="dropdown-select"><span>USD</span></div>
+        <div class="dropdown-select"><span>English</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="main-header" id="mainHeader">
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="logo">COLO<span>SHOP</span></a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="nav-link">HOME</a></li>
+          <li><a href="index.html#new-arrivals" class="nav-link">SHOP</a></li>
+          <li><a href="index.html#deal-week" class="nav-link">PROMOTION <span class="nav-tag">HOT</span></a></li>
+          <li><a href="lookbook.html" class="nav-link">LOOKBOOK <span class="nav-tag">NEW</span></a></li>
+          <li><a href="about.html" class="nav-link active">ABOUT</a></li>
+          <li><a href="blog-post.html" class="nav-link">BLOG</a></li>
+          <li><a href="#contact-footer" class="nav-link">CONTACT</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="action-btn" id="searchBtn" title="Search"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></button>
+          <button class="action-btn" id="wishlistBtn" title="Wishlist"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg><span class="badge-count" id="wishlistBadgeCount">2</span></button>
+          <button class="action-btn" id="cartBtn" title="Cart"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg><span class="badge-count" id="cartBadgeCount">2</span></button>
+          <button class="hamburger-btn" id="hamburgerBtn"><span></span><span></span><span></span></button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <div class="container">
+      <span class="hero-subtitle" style="justify-content: center; color: var(--primary);">OUR ATELIER HERITAGE</span>
+      <h1>Form, Function & Soul</h1>
+      <p>Born from an obsession with uncompromised craftsmanship, ColoShop unites modern minimalist architecture with the warmth of heirloom-quality textiles and leather goods.</p>
+    </div>
+  </section>
+
+  <!-- Story Section -->
+  <section class="story-section">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-img-stack reveal">
+          <img src="assets/images/category-accessories.jpg" alt="Artisan hand-stitched leather bags" class="story-img-main">
+          <div class="story-badge">
+            <strong>100%</strong>
+            <span>Artisan Crafted</span>
+          </div>
+        </div>
+
+        <div class="story-text reveal">
+          <span class="deal-tag">THE FOUNDING VISION</span>
+          <h2>Redefining Modern Luxury Without the Traditional Markup</h2>
+          <p>
+            In a fashion world saturated with disposable cycles and manufactured trends, ColoShop was established with a singular conviction: clothing should be made to outlast seasons, holding its elegance and silhouette year after year.
+          </p>
+          <p>
+            We partner directly with multigenerational master weavers in Biella, Italy, and leather artisans in Florence, eliminating excessive intermediary fees to deliver genuine bespoke quality directly to you.
+          </p>
+          <a href="lookbook.html" class="btn-primary">EXPLORE THE EDITORIAL</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Pillars -->
+  <section class="pillars-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">The Three Pillars</h2>
+        <div class="section-underline"></div>
+      </div>
+
+      <div class="pillars-grid">
+        <div class="pillar-card reveal">
+          <div class="pillar-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+          </div>
+          <h3>Ethical Sourcing</h3>
+          <p>Every strand of cashmere, selvedge denim, and vegetable-tanned hide is verified with certified cruelty-free and zero-chemical finishing standards.</p>
+        </div>
+
+        <div class="pillar-card reveal">
+          <div class="pillar-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+          </div>
+          <h3>Precision Architecture</h3>
+          <p>Our silhouettes are mathematically tailored to drape naturally across all body types, balancing structured shoulders with relaxed ease.</p>
+        </div>
+
+        <div class="pillar-card reveal">
+          <div class="pillar-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+          </div>
+          <h3>Timeless Longevity</h3>
+          <p>We do not design for temporary hype. Every ColoShop garment is built to become a cherished cornerstone of your personal style for a decade to come.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="timeline-section">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2 class="section-title">Our Milestone Journey</h2>
+        <div class="section-underline"></div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2018</div>
+          <h4 class="timeline-title">The First Knitwear Capsule</h4>
+          <p class="timeline-desc">ColoShop launches in SoHo, New York with five iconic horizontal-stripe cashmere knit sweaters sold out in 48 hours.</p>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2021</div>
+          <h4 class="timeline-title">Florence Leather Partnership</h4>
+          <p class="timeline-desc">Established dedicated artisan atelier outside Florence, introducing handcrafted full-grain leather bags and chronographs.</p>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2024</div>
+          <h4 class="timeline-title">Net-Zero Carbon Certified</h4>
+          <p class="timeline-desc">Shifted 100% of global packaging to biodegradable plant-based materials and offset all shipping carbon footprint.</p>
+        </div>
+
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-year">2026</div>
+          <h4 class="timeline-title">Global Flagship & Digital Atelier</h4>
+          <p class="timeline-desc">Reaching over 80 countries worldwide with real-time interactive lookbooks, styling sessions, and seasonal runway capsules.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modals & Drawers -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <h3>Your Shopping Bag</h3>
+      <button class="close-btn" id="closeCartBtn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+    </div>
+    <div class="shipping-meter-wrap">
+      <div class="shipping-meter-text" id="shippingMeterText"></div>
+      <div class="shipping-meter-bar"><div class="shipping-meter-progress" id="shippingMeterProgress"></div></div>
+    </div>
+    <div class="cart-items-list" id="cartItemsList"></div>
+    <div class="cart-footer">
+      <div class="cart-subtotal-row"><span>Subtotal</span><span id="cartSubtotalPrice">$0.00</span></div>
+      <button class="btn-primary btn-checkout" id="checkoutBtn">PROCEED TO CHECKOUT</button>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="quickViewModalOverlay">
+    <div class="modal-dialog">
+      <button class="close-btn modal-close" id="quickViewCloseBtn"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+      <div class="quickview-grid">
+        <div class="quickview-img"><img id="modalProductImg" src="" alt="Detail"></div>
+        <div class="quickview-details">
+          <span class="product-category-name" id="modalProductCategory"></span>
+          <h2 id="modalProductTitle"></h2>
+          <div class="quickview-price-box" id="modalProductPrice"></div>
+          <p class="quickview-desc" id="modalProductDesc"></p>
+          <div class="swatch-group">
+            <span class="swatch-label">Select Size</span>
+            <div class="size-options">
+              <span class="size-pill" data-size="XS">XS</span>
+              <span class="size-pill" data-size="S">S</span>
+              <span class="size-pill active" data-size="M">M</span>
+              <span class="size-pill" data-size="L">L</span>
+              <span class="size-pill" data-size="XL">XL</span>
+            </div>
+          </div>
+          <div class="quickview-actions">
+            <div class="qty-control">
+              <button class="qty-btn" id="modalQtyMinus">-</button>
+              <span class="qty-num" id="modalQtyDisplay">1</span>
+              <button class="qty-btn" id="modalQtyPlus">+</button>
+            </div>
+            <button class="btn-primary" id="modalAddToCartBtn" style="flex-grow: 1;">ADD TO CART</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="search-overlay" id="searchOverlay">
+    <button class="close-btn" id="searchCloseBtn" style="position: absolute; top: 24px; right: 28px; background: rgba(255,255,255,0.1); color: #fff;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>
+    <div class="search-container">
+      <div class="search-input-wrap">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search the collection...">
+      </div>
+      <div class="search-results-box" id="searchResultsBox"></div>
+    </div>
+  </div>
+
+  <div class="toast-notification" id="toastNotification">
+    <div class="toast-icon" id="toastIcon"></div>
+    <div class="toast-message" id="toastMessage"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="main-footer" id="contact-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="margin-bottom: 16px;">COLO<span>SHOP</span></a>
+          <p>Curating timeless wardrobe signatures and contemporary tailoring for modern tastemakers.</p>
+        </div>
+        <div class="footer-col">
+          <h4>EXPLORE</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lookbook.html">Lookbook</a></li>
+            <li><a href="about.html">About Atelier</a></li>
+            <li><a href="blog-post.html">Trends Journal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>CUSTOMER SERVICE</h4>
+          <ul class="footer-links">
+            <li><a href="#">Order Tracking</a></li>
+            <li><a href="#">Shipping Policy</a></li>
+            <li><a href="#">Returns & Exchanges</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>FLAGSHIP</h4>
+          <p>5th Avenue, Fashion District, New York, NY<br>contact@coloshop.com</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 COLO SHOP. All Rights Reserved.</div>
+        <div class="payment-methods">
+          <span class="payment-badge">VISA</span>
+          <span class="payment-badge">MASTERCARD</span>
+          <span class="payment-badge">APPLE PAY</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

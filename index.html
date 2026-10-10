@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ColoShop - Discover modern fashion trends, new seasonal arrivals, luxury accessories, and exclusive deals with free shipping on orders over $50.">
+  <meta name="keywords" content="fashion, clothing, accessories, women's fashion, men's style, coloshop, online shopping">
+  <title>COLO SHOP | Modern Fashion, Trends & New Arrivals</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🛍️</text></svg>">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       TOP UTILITY BAR
+       ========================================================================== -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-left">
+        <span class="promo-tag">LIMITED OFFER</span>
+        <span>FREE SHIPPING ON ALL U.S ORDERS OVER $50</span>
+      </div>
+      <div class="top-bar-right">
+        <!-- Currency Dropdown -->
+        <div class="dropdown-select" tabindex="0">
+          <span>USD</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          <div class="dropdown-menu">
+            <a href="#usd">USD ($)</a>
+            <a href="#eur">EUR (€)</a>
+            <a href="#gbp">GBP (£)</a>
+          </div>
+        </div>
+
+        <!-- Language Dropdown -->
+        <div class="dropdown-select" tabindex="0">
+          <span>English</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          <div class="dropdown-menu">
+            <a href="#en">English</a>
+            <a href="#es">Español</a>
+            <a href="#fr">Français</a>
+          </div>
+        </div>
+
+        <!-- Account Dropdown -->
+        <div class="dropdown-select" tabindex="0">
+          <span>My Account</span>
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          <div class="dropdown-menu">
+            <a href="#signin">Sign In</a>
+            <a href="#register">Register</a>
+            <a href="#orders">Track Orders</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MAIN NAVIGATION BAR
+       ========================================================================== -->
+  <header class="main-header" id="mainHeader">
+    <div class="container">
+      <nav class="navbar">
+        <!-- Brand Logo -->
+        <a href="#" class="logo" id="brandLogo">
+          COLO<span>SHOP</span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="nav-link active">HOME</a></li>
+          <li><a href="#new-arrivals" class="nav-link">SHOP</a></li>
+          <li><a href="#deal-week" class="nav-link">PROMOTION <span class="nav-tag">HOT</span></a></li>
+          <li><a href="lookbook.html" class="nav-link">LOOKBOOK <span class="nav-tag">NEW</span></a></li>
+          <li><a href="about.html" class="nav-link">ABOUT</a></li>
+          <li><a href="blog-post.html" class="nav-link">BLOG</a></li>
+          <li><a href="#contact-footer" class="nav-link">CONTACT</a></li>
+        </ul>
+
+        <!-- Right Header Action Icons -->
+        <div class="nav-actions">
+          <!-- Search Button -->
+          <button class="action-btn" id="searchBtn" title="Search catalog" aria-label="Search catalog">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </button>
+
+          <!-- User Profile -->
+          <a href="#account" class="action-btn" id="userBtn" title="My Account" aria-label="My Account">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </a>
+
+          <!-- Wishlist Button -->
+          <button class="action-btn" id="wishlistBtn" title="Wishlist" aria-label="Wishlist">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+            </svg>
+            <span class="badge-count" id="wishlistBadgeCount">2</span>
+          </button>
+
+          <!-- Shopping Bag Button -->
+          <button class="action-btn" id="cartBtn" title="Shopping Cart" aria-label="Shopping Cart">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="9" cy="21" r="1"></circle>
+              <circle cx="20" cy="21" r="1"></circle>
+              <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+            </svg>
+            <span class="badge-count" id="cartBadgeCount">2</span>
+          </button>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open navigation menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION (Matches reference screenshot)
+         ========================================================================== -->
+    <section class="hero-section" id="heroSection">
+      <div class="hero-background-shape"></div>
+      <div class="container">
+        <div class="hero-content-grid">
+          <div class="hero-text reveal active">
+            <span class="hero-subtitle">SPRING / SUMMER COLLECTION 2026</span>
+            <h1 class="hero-title">Get up to 30% Off<br>New Arrivals</h1>
+            <div class="hero-cta">
+              <a href="#new-arrivals" class="btn-primary" id="heroShopNowBtn">
+                SHOP NOW
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+              <a href="#deal-week" class="btn-secondary">EXPLORE DEALS</a>
+            </div>
+          </div>
+
+          <div class="hero-image-wrap reveal active">
+            <img src="assets/images/hero-model.jpg" alt="ColoShop Fashion Model in Chic Striped Knitwear" class="hero-image" id="heroModelImage">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CATEGORY BANNERS (Exact match to reference cards)
+         ========================================================================== -->
+    <section class="category-banners" id="categoryBanners">
+      <div class="container">
+        <div class="category-grid">
+          <!-- Women's Card -->
+          <div class="category-card reveal" data-category="women" id="catWomen">
+            <img src="assets/images/category-women.jpg" alt="Women's Fashion Collection" loading="lazy">
+            <div class="category-overlay"></div>
+            <button class="category-btn">WOMEN'S</button>
+          </div>
+
+          <!-- Accessories's Card -->
+          <div class="category-card reveal" data-category="accessories" id="catAccessories">
+            <img src="assets/images/category-accessories.jpg" alt="Luxury Handbags & Accessories" loading="lazy">
+            <div class="category-overlay"></div>
+            <button class="category-btn">ACCESSORIES'S</button>
+          </div>
+
+          <!-- Men's Card -->
+          <div class="category-card reveal" data-category="men" id="catMen">
+            <img src="assets/images/category-men.jpg" alt="Men's Luxury Menswear" loading="lazy">
+            <div class="category-overlay"></div>
+            <button class="category-btn">MEN'S</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         NEW ARRIVALS (Filterable Product Grid)
+         ========================================================================== -->
+    <section class="new-arrivals-section" id="new-arrivals">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">New Arrivals</h2>
+          <div class="section-underline"></div>
+        </div>
+
+        <!-- Filter Navigation Tabs -->
+        <div class="filter-nav reveal">
+          <button class="filter-tab active" data-filter="all">ALL</button>
+          <button class="filter-tab" data-filter="women">WOMEN'S</button>
+          <button class="filter-tab" data-filter="accessories">ACCESSORIES</button>
+          <button class="filter-tab" data-filter="men">MEN'S</button>
+        </div>
+
+        <!-- Dynamic Product Grid -->
+        <div class="product-grid" id="productGrid">
+          <!-- Populated dynamically via js/app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         DEAL OF THE WEEK SECTION (With Active Live Countdown)
+         ========================================================================== -->
+    <section class="deal-section" id="deal-week">
+      <div class="container">
+        <div class="deal-grid">
+          <div class="deal-image-wrap reveal">
+            <img src="assets/images/deal-banner.jpg" alt="Deal of the week luxury trench coat" loading="lazy">
+          </div>
+
+          <div class="deal-content reveal">
+            <span class="deal-tag">SPECIAL PROMOTION</span>
+            <h2 class="deal-title">Deal Of The Week</h2>
+            <div class="section-underline" style="margin-bottom: 20px;"></div>
+            <p class="deal-desc">
+              Step into tailored elegance with our iconic Italian camel wool trench coat. Featuring premium craftsmanship and water-resistant finish at an unprecedented 30% savings.
+            </p>
+
+            <!-- Active Countdown Timer -->
+            <div class="countdown-clock" id="countdownClock">
+              <div class="clock-unit">
+                <span class="clock-num" id="clockDays">04</span>
+                <span class="clock-label">Days</span>
+              </div>
+              <div class="clock-unit">
+                <span class="clock-num" id="clockHours">18</span>
+                <span class="clock-label">Hours</span>
+              </div>
+              <div class="clock-unit">
+                <span class="clock-num" id="clockMins">32</span>
+                <span class="clock-label">Mins</span>
+              </div>
+              <div class="clock-unit">
+                <span class="clock-num" id="clockSecs">55</span>
+                <span class="clock-label">Secs</span>
+              </div>
+            </div>
+
+            <a href="#new-arrivals" class="btn-primary" onclick="openQuickView(1); return false;">
+              CLAIM DEAL NOW
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         BEST SELLERS SECTION
+         ========================================================================== -->
+    <section class="best-sellers-section" id="best-sellers">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Best Sellers</h2>
+          <div class="section-underline"></div>
+        </div>
+
+        <div class="best-sellers-slider reveal" id="bestSellersSlider">
+          <!-- Populated dynamically via js/app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         VALUE PROPOSITIONS / FEATURES BAR
+         ========================================================================== -->
+    <section class="features-section" id="featuresSection">
+      <div class="container">
+        <div class="features-grid">
+          <!-- Feature 1 -->
+          <div class="feature-box reveal">
+            <div class="feature-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+            </div>
+            <div class="feature-info">
+              <h4>FREE SHIPPING</h4>
+              <p>Suffered Alteration in Some Form</p>
+            </div>
+          </div>
+
+          <!-- Feature 2 -->
+          <div class="feature-box reveal">
+            <div class="feature-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <div class="feature-info">
+              <h4>CASH ON DELIVERY</h4>
+              <p>The Internet Tend To Repeat</p>
+            </div>
+          </div>
+
+          <!-- Feature 3 -->
+          <div class="feature-box reveal">
+            <div class="feature-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10"></path></svg>
+            </div>
+            <div class="feature-info">
+              <h4>45 DAYS RETURN</h4>
+              <p>Making it Look Like Readable</p>
+            </div>
+          </div>
+
+          <!-- Feature 4 -->
+          <div class="feature-box reveal">
+            <div class="feature-icon-wrap">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+            </div>
+            <div class="feature-info">
+              <h4>OPENING ALL WEEK</h4>
+              <p>8AM - 09PM Everyday Care</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         LATEST BLOGS / EDITORIAL SECTION
+         ========================================================================== -->
+    <section class="blogs-section" id="fashion-blog">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title">Latest Blogs</h2>
+          <div class="section-underline"></div>
+        </div>
+
+        <div class="blog-grid">
+          <!-- Article 1 -->
+          <article class="blog-card reveal">
+            <div class="blog-img-box">
+              <img src="assets/images/category-women.jpg" alt="Fall trends 2026" loading="lazy">
+              <span class="blog-tag">Trends</span>
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span>By Admin</span>
+                <span>•</span>
+                <span>Oct 10, 2026</span>
+              </div>
+              <h3 class="blog-title">Here are the trends I see coming this Fall season</h3>
+              <p class="blog-excerpt">Explore the color palettes, textures, and tailoring directions commanding the runways from Paris to New York.</p>
+              <a href="#read" class="blog-link">
+                Read More 
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="blog-card reveal">
+            <div class="blog-img-box">
+              <img src="assets/images/category-accessories.jpg" alt="Essential accessories" loading="lazy">
+              <span class="blog-tag">Accessories</span>
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span>By Fashion Desk</span>
+                <span>•</span>
+                <span>Oct 08, 2026</span>
+              </div>
+              <h3 class="blog-title">The essential luxury leather accessories every capsule needs</h3>
+              <p class="blog-excerpt">From statement gold buckles to supple vegetable-tanned crossbody bags that only look better with age.</p>
+              <a href="#read" class="blog-link">
+                Read More 
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="blog-card reveal">
+            <div class="blog-img-box">
+              <img src="assets/images/category-men.jpg" alt="Tailoring menswear" loading="lazy">
+              <span class="blog-tag">Menswear</span>
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span>By Style Editor</span>
+                <span>•</span>
+                <span>Oct 04, 2026</span>
+              </div>
+              <h3 class="blog-title">Effortless layering: how to elevate everyday camel blazers</h3>
+              <p class="blog-excerpt">A masterclass in pairing relaxed organic cotton t-shirts with sharp wool tailoring for day-to-night transitions.</p>
+              <a href="#read" class="blog-link">
+                Read More 
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"></polyline></svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         NEWSLETTER SECTION
+         ========================================================================== -->
+    <section class="newsletter-section" id="newsletterSection">
+      <div class="container">
+        <div class="newsletter-box reveal">
+          <div class="newsletter-text">
+            <h3>Newsletter</h3>
+            <p>Subscribe to our newsletter and get 20% off your first purchase</p>
+          </div>
+          <form class="newsletter-form" id="newsletterForm">
+            <input type="email" placeholder="Your email" class="newsletter-input" required>
+            <button type="submit" class="newsletter-btn">SUBSCRIBE</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       MAIN FOOTER
+       ========================================================================== -->
+  <footer class="main-footer" id="contact-footer">
+    <div class="container">
+      <div class="footer-top">
+        <!-- Col 1 -->
+        <div class="footer-col">
+          <a href="#" class="logo" style="margin-bottom: 16px;">COLO<span>SHOP</span></a>
+          <p>ColoShop is your destination for modern luxury fashion, timeless wardrobe essentials, and curated designer accessories designed to inspire confidence.</p>
+          <div class="social-links">
+            <a href="#facebook" class="social-btn" aria-label="Facebook">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+            </a>
+            <a href="#twitter" class="social-btn" aria-label="Twitter">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+            </a>
+            <a href="#instagram" class="social-btn" aria-label="Instagram">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+            </a>
+            <a href="#pinterest" class="social-btn" aria-label="Pinterest">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.538.535 6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"></path></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2 -->
+        <div class="footer-col">
+          <h4>SHOP CATEGORIES</h4>
+          <ul class="footer-links">
+            <li><a href="#new-arrivals">Women's Collection</a></li>
+            <li><a href="#new-arrivals">Men's Essentials</a></li>
+            <li><a href="#new-arrivals">Handbags & Wallets</a></li>
+            <li><a href="#new-arrivals">Footwear & Sneakers</a></li>
+            <li><a href="#new-arrivals">Seasonal Accessories</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3 -->
+        <div class="footer-col">
+          <h4>CUSTOMER SERVICE</h4>
+          <ul class="footer-links">
+            <li><a href="#order">Order Tracking</a></li>
+            <li><a href="#shipping">Shipping & Handling</a></li>
+            <li><a href="#returns">Returns & Exchanges</a></li>
+            <li><a href="#privacy">Privacy Policy</a></li>
+            <li><a href="#terms">Terms & Conditions</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4 -->
+        <div class="footer-col">
+          <h4>STORE INFORMATION</h4>
+          <p>
+            <strong>Flagship:</strong> 5th Avenue, Fashion District, New York, NY 10001<br>
+            <strong>Phone:</strong> +1 (800) 456-7890<br>
+            <strong>Support:</strong> contact@coloshop.com
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© 2026 COLO SHOP. All Rights Reserved. Crafted with care & animation.</div>
+        <div class="payment-methods">
+          <span class="payment-badge">VISA</span>
+          <span class="payment-badge">MASTERCARD</span>
+          <span class="payment-badge">PAYPAL</span>
+          <span class="payment-badge">APPLE PAY</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       SLIDING CART DRAWER
+       ========================================================================== -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+  <div class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-label="Shopping Cart">
+    <div class="cart-header">
+      <h3>Your Shopping Bag</h3>
+      <button class="close-btn" id="closeCartBtn" aria-label="Close Shopping Bag">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+    </div>
+
+    <!-- Free Shipping Meter -->
+    <div class="shipping-meter-wrap">
+      <div class="shipping-meter-text" id="shippingMeterText">
+        <span>Add <strong>$15.00</strong> more for <strong>FREE SHIPPING!</strong></span>
+        <span>70%</span>
+      </div>
+      <div class="shipping-meter-bar">
+        <div class="shipping-meter-progress" id="shippingMeterProgress" style="width: 70%;"></div>
+      </div>
+    </div>
+
+    <!-- Cart Items Scroll List -->
+    <div class="cart-items-list" id="cartItemsList">
+      <!-- Populated dynamically via js/app.js -->
+    </div>
+
+    <!-- Cart Footer -->
+    <div class="cart-footer">
+      <div class="cart-subtotal-row">
+        <span>Subtotal</span>
+        <span id="cartSubtotalPrice">$314.00</span>
+      </div>
+      <button class="btn-primary btn-checkout" id="checkoutBtn">
+        PROCEED TO CHECKOUT
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       QUICK VIEW MODAL
+       ========================================================================== -->
+  <div class="modal-overlay" id="quickViewModalOverlay" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <button class="close-btn modal-close" id="quickViewCloseBtn" aria-label="Close modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+      </button>
+      <div class="quickview-grid">
+        <div class="quickview-img">
+          <img id="modalProductImg" src="" alt="Product Detail">
+        </div>
+        <div class="quickview-details">
+          <span class="product-category-name" id="modalProductCategory">WOMEN</span>
+          <h2 id="modalProductTitle">Product Title</h2>
+          <div class="quickview-price-box" id="modalProductPrice">$0.00</div>
+          <p class="quickview-desc" id="modalProductDesc">Description goes here.</p>
+          
+          <!-- Size Selector -->
+          <div class="swatch-group">
+            <span class="swatch-label">Select Size</span>
+            <div class="size-options">
+              <span class="size-pill" data-size="XS">XS</span>
+              <span class="size-pill" data-size="S">S</span>
+              <span class="size-pill active" data-size="M">M</span>
+              <span class="size-pill" data-size="L">L</span>
+              <span class="size-pill" data-size="XL">XL</span>
+            </div>
+          </div>
+
+          <!-- Quantity and Add to Cart -->
+          <div class="quickview-actions">
+            <div class="qty-control">
+              <button class="qty-btn" id="modalQtyMinus">-</button>
+              <span class="qty-num" id="modalQtyDisplay">1</span>
+              <button class="qty-btn" id="modalQtyPlus">+</button>
+            </div>
+            <button class="btn-primary" id="modalAddToCartBtn" style="flex-grow: 1;">
+              ADD TO CART
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       INSTANT SEARCH OVERLAY
+       ========================================================================== -->
+  <div class="search-overlay" id="searchOverlay" role="dialog" aria-modal="true">
+    <button class="close-btn" id="searchCloseBtn" style="position: absolute; top: 24px; right: 28px; background: rgba(255,255,255,0.1); color: #fff;" aria-label="Close search">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <div class="search-container">
+      <div class="search-input-wrap">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search the collection..." autocomplete="off">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#fe4c50" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </div>
+      <div class="search-results-box" id="searchResultsBox">
+        <!-- Live search results rendered here -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       TOAST NOTIFICATION
+       ========================================================================== -->
+  <div class="toast-notification" id="toastNotification" role="alert" aria-live="polite">
+    <div class="toast-icon" id="toastIcon">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    </div>
+    <div class="toast-message" id="toastMessage">Item added to cart!</div>
+  </div>
+
+  <!-- ==========================================================================
+       FLOATING BACK TO TOP
+       ========================================================================== -->
+  <button class="back-to-top" id="backToTopBtn" aria-label="Back to top" title="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"></polyline></svg>
+  </button>
+
+  <!-- JavaScript -->
+  <script src="js/app.js"></script>
+</body>
+</html>
